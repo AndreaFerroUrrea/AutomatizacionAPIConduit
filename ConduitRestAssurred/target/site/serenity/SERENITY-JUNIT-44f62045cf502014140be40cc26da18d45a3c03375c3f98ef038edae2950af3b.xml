@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Articles" skipped="1" tests="4" time="8.87" timestamp="2022-01-24 02:55:49"><testcase name="List articles"/><testcase name="Post article"><error type="net.serenitybdd.core.exceptions.UnrecognisedException"/><system-err>null&#13;
+io.cucumber.datatable.UndefinedDataTableTypeException.listNoConverterDefined(UndefinedDataTableTypeException.java:110)&#13;
+io.cucumber.datatable.DataTableTypeRegistryTableConverter.toList(DataTableTypeRegistryTableConverter.java:136)&#13;
+io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:102)&#13;
+io.cucumber.datatable.DataTable.convert(DataTable.java:360)&#13;
+io.cucumber.core.stepexpression.StepExpressionFactory.lambda$createExpression$0(StepExpressionFactory.java:66)&#13;
+io.cucumber.core.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:47)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:63)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:49)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:99)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:71)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:234)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)&#13;
+</system-err></testcase><testcase name="Put article"/><testcase name="Delete article created"><skipped/></testcase></testsuite>

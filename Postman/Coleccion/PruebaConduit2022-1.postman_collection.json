@@ -1,0 +1,777 @@
+{
+	"info": {
+		"_postman_id": "37ca07aa-4f75-41bd-8242-57c60387bfff",
+		"name": "PruebaConduit2022-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Metodos",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "ObtenerArticuloCreado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"//var data = pm.response.json();\r",
+											"//const data = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 600ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+											"});\r",
+											"\r",
+											"//Slug correcto\r",
+											"pm.test(\"slug es correcto\", function(){\r",
+											"    pm.expect(data.slug).to.eql(pm.environment.get(\"slug\"));\r",
+											"})\r",
+											"\r",
+											"/*\r",
+											"//Comprobar dato string dentro de una cadena \r",
+											"const articlePrueba = data.article.find(m => m.slug === \"Articulo-7429\");\r",
+											"      pm.expect(articlePrueba).to.be.an(toString, \"Could not find the setting\");\r",
+											"*/\r",
+											"\r",
+											"\r",
+											"//Afirmar un tipo de valor\r",
+											"pm.test(\"Test data type of the response\", () => {\r",
+											"    pm.expect(data).to.be.an(\"object\");\r",
+											"    pm.expect(data.title).to.be.a.toString;\r",
+											"    pm.expect(data.slug).to.be.a.toString;\r",
+											"    pm.expect(data.body).to.be.a.toString;\r",
+											"    pm.expect(data.description).to.be.a.toString;\r",
+											"    pm.expect(data.createdAt).to.be.a.undefined;\r",
+											"    pm.expect(data.updatedAt).to.be.a.undefined;\r",
+											"   // pm.expect(data.tagList).to.be.empty;\r",
+											"   // pm.expect(data.favoritesCount).to.be.a(\"number\");\r",
+											"    pm.expect(data.favorited).to.be.a.undefined;\r",
+											"    pm.expect(data.author).to.be.a.undefined;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"\r",
+											"pm.sendRequest({\r",
+											"    url: 'https://api.realworld.io/api/articles/',\r",
+											"    method: 'POST',\r",
+											"    \r",
+											"    header: { 'Content-Type': 'application/json',\r",
+											"    'Authorization': `Bearer ${pm.environment.get('Token')}`\r",
+											"     },\r",
+											"\r",
+											"    body: {\r",
+											"        mode: 'raw',\r",
+											"        raw: JSON.stringify({\r",
+											"    \"article\": {\r",
+											"        \"tagList\": [],\r",
+											"        \"title\": \"Articulo\",\r",
+											"        \"description\": \"articulod\",\r",
+											"        \"body\": \"articuloe\"\r",
+											"        }\r",
+											"    })}\r",
+											"}) \r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Host}}articles/{{Slug}}",
+									"host": [
+										"{{Host}}articles"
+									],
+									"path": [
+										"{{Slug}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TodosArticulos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var data = JSON.parse(responseBody);\r",
+											"\r",
+											"    //Validar codigo\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"//Existe articles\r",
+											"pm.test(\"Existe articles\", () =>{\r",
+											"    pm.expect(data).to.have.property(\"articles\")\r",
+											"})\r",
+											"//Tiempo\r",
+											"pm.test(\"Response time is less than 600ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+											"});\r",
+											"\r",
+											"//Validar, hay 4 articulos\r",
+											"var jsonData = pm.response.json();\r",
+											"pm.test('validar, el numero de articulos es ' + jsonData.articles.length, function (){\r",
+											"  pm.expect(jsonData.articles.length).to.equals(4);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"existe slug en article\"), () =>{\r",
+											"    pm.expect(data.articles[1]).to.equals('slug')\r",
+											"}\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"\r",
+											"pm.sendRequest({\r",
+											"    url: 'https://api.realworld.io/api/articles/',\r",
+											"    method: 'POST',\r",
+											"    \r",
+											"    header: { 'Content-Type': 'application/json',\r",
+											"    'Authorization': `Bearer ${pm.environment.get('Token')}`\r",
+											"     },\r",
+											"\r",
+											"    body: {\r",
+											"        mode: 'raw',\r",
+											"        raw: JSON.stringify({\r",
+											"    \"article\": {\r",
+											"        \"tagList\": [],\r",
+											"        \"title\": \"Articulo\",\r",
+											"        \"description\": \"articulod\",\r",
+											"        \"body\": \"articuloe\"\r",
+											"        }\r",
+											"    })}\r",
+											"}) "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Host}}articles/",
+									"host": [
+										"{{Host}}articles"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "UserLogin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response time is less than 600ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(600,700);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"var data = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"User\",data.user.username);\r",
+											"\r",
+											"pm.test(\"Content-Type header es application/json; charset=utf-8\", () => {\r",
+											"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Test data type of the response\", () => {\r",
+											"    pm.expect(data).to.be.an(\"object\");\r",
+											"    pm.expect(data.user.email).to.be.a.toString;\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaGFuYWFuZHJlYTEwMDBAZ21haWwuY29tIiwidXNlcm5hbWUiOiJBbmRyZWEiLCJwYXNzd29yZCI6IiQyYSQxMCQ1LnF0YkxVQTQ5L2R2bkdHRy5pdEMuZ0RKZFJDUkozMHFjM2txSmxEejJsT01qQXRtemZBMiIsImJpbyI6bnVsbCwiaW1hZ2UiOiJodHRwczovL2FwaS5yZWFsd29ybGQuaW8vaW1hZ2VzL3NtaWxleS1jeXJ1cy5qcGVnIiwiaWF0IjoxNjQxNTI4OTY1LCJleHAiOjE2NDY3MTI5NjV9.aDxp9c3HNvuyueFQcFFndmsGsuyQMvtLcNK77fzF_zE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n        \"email\": \"johanaandrea1000@gmail.com\",\r\n        \"password\": \"14Empanadas.\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}users/login",
+									"host": [
+										"{{Host}}users"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AñadirArticulo",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var data = JSON.parse(responseBody);\r",
+											"\r",
+											"//const responseJson = pm.response.json();\r",
+											"if (pm.environment.get('Prueba')==='true'){\r",
+											"postman.setEnvironmentVariable(\"Slug\", data.article.slug);\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);})\r",
+											"    pm.test('article tiene autor', ()=>{\r",
+											"    pm.expect(pm.response.text()).to.include('author')\r",
+											"})\r",
+											"\r",
+											"} else {\r",
+											"   pm.test(\"Status code is 422\", function () {\r",
+											"    pm.response.to.have.status(422);}) \r",
+											"}\r",
+											"\r",
+											"\r",
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 422]);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											"/*\r",
+											"pm.test(\"Autora es Andrea\", () =>{\r",
+											"    pm.expect(data.author.username(0)).to.eql(\"Andrea\");\r",
+											"})\r",
+											"*/\r",
+											"\r",
+											"//Tiene content-type\r",
+											"pm.test(\"Content-Type header is present\", () => {\r",
+											"  pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"//\r",
+											"pm.test(\"Server header es cloudflare\", () => {\r",
+											"  pm.expect(pm.response.headers.get('Server')).to.eql('cloudflare');\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"if(pm.environment.get('Prueba')==='true'){\r",
+											"   //asigne 200\r",
+											"    pm.sendRequest({\r",
+											"        url: `https://api.realworld.io/api/articles/${pm.environment.get('Slug')}`,\r",
+											"        method: 'Delete',\r",
+											"        header: {'Authorization': `Bearer ${pm.environment.get('Token')}`}  \r",
+											"    })\r",
+											"};"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n    \"article\": {\r\n        \"tagList\": [],\r\n        \"title\": \"Articulo\",\r\n        \"description\": \"articulod\",\r\n        \"body\": \"articuloe\"\r\n    }\r\n}\r\n\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}articles/",
+									"host": [
+										"{{Host}}articles"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "EliminarArticulo",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var PRUEBA = pm.environment.get('Prueba');\r",
+											"\r",
+											"if ( PRUEBA === 'true'){\r",
+											"    pm.test(\"Status code is 204\", function () {\r",
+											"    pm.response.to.have.status(204);\r",
+											"});\r",
+											"}else{\r",
+											"    pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											"}\r",
+											"\r",
+											"pm.test(\"Response time is less than 600ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"CF-Cache-Status header is present\", () => {\r",
+											"  pm.response.to.have.header(\"CF-Cache-Status\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"CF-Cache-Status header es DYNAMIC\", () => {\r",
+											"  pm.expect(pm.response.headers.get('CF-Cache-Status')).to.eql('DYNAMIC');\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var PRUEBA = pm.environment.get('Prueba');\r",
+											"var TOKEN = pm.environment.get('Token');\r",
+											"\r",
+											"\r",
+											"if(PRUEBA === 'true'){\r",
+											"pm.sendRequest({\r",
+											"    url: 'https://api.realworld.io/api/articles/',\r",
+											"    method: 'POST',\r",
+											"    header: { 'Content-Type': 'application/json',\r",
+											"    'Authorization': `Bearer ${TOKEN}`},\r",
+											"    body: {\r",
+											"        mode: 'raw',\r",
+											"        raw: JSON.stringify({\r",
+											"    \"article\": {\r",
+											"        \"tagList\": [],\r",
+											"        \"title\": \"Articulo\",\r",
+											"        \"description\": \"articulod\",\r",
+											"        \"body\": \"articuloe\"\r",
+											"        }\r",
+											"    })}\r",
+											"})  \r",
+											"}\r",
+											"/*\r",
+											"pm.sendRequest(options, function (err, res) {\r",
+											"   var jsonData = res.json();\r",
+											"    if (err) {\r",
+											"        console.log(err);\r",
+											"    }\r",
+											"    else {\r",
+											"        pm.environment.set(\"Response\", jsonData.ID);\r",
+											"    }\r",
+											"});\r",
+											"*/"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Host}}articles/{{Slug}}",
+									"host": [
+										"{{Host}}articles"
+									],
+									"path": [
+										"{{Slug}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EliminarComentarioArticulo",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var PRUEBA = pm.environment.get('Prueba');\r",
+											"var TOKEN = pm.environment.get('Token');\r",
+											"var SLUG = pm.environment.get('Slug');\r",
+											"\r",
+											"if (PRUEBA === 'true'){\r",
+											"    //Añadir articulo\r",
+											"pm.sendRequest({\r",
+											"    url: 'https://api.realworld.io/api/articles/',\r",
+											"    method: 'POST',\r",
+											"    header: { 'Content-Type': 'application/json',\r",
+											"    'Authorization': `Bearer ${TOKEN}`\r",
+											"     },\r",
+											"    body: {\r",
+											"        mode: 'raw',\r",
+											"        raw: JSON.stringify({\r",
+											"    \"article\": {\r",
+											"        \"tagList\": [],\r",
+											"        \"title\": \"Articulo\",\r",
+											"        \"description\": \"articulod\",\r",
+											"        \"body\": \"articuloe\"\r",
+											"        }\r",
+											"    })}\r",
+											"    \r",
+											"}) \r",
+											"//Añadir comentario\r",
+											"pm.sendRequest({\r",
+											"    url: `https://api.realworld.io/api/articles/${SLUG}/comment`,\r",
+											"    method: 'POST',\r",
+											"    header: { 'Content-Type': 'application/json',\r",
+											"    'Authorization': `Bearer ${TOKEN}`\r",
+											"     },\r",
+											"    body: {\r",
+											"        mode: 'raw',\r",
+											"        raw: JSON.stringify({\r",
+											"  \"comment\": {\r",
+											"    \"body\": \"NUEVO COMENTARIO\"\r",
+											"  }\r",
+											"})}\r",
+											"})  \r",
+											"postman.setEnvironmentVariable(\"IdComentario\", data.comment.id);\r",
+											"}\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var PRUEBA = pm.environment.get('Prueba');\r",
+											"\r",
+											"if ( PRUEBA === 'true'){\r",
+											"    pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"}else{\r",
+											"    pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaGFuYWFuZHJlYTEwMDBAZ21haWwuY29tIiwidXNlcm5hbWUiOiJBbmRyZWEgZWRpdGFkYSIsImJpbyI6bnVsbCwiaW1hZ2UiOiJodHRwczovL2FwaS5yZWFsd29ybGQuaW8vaW1hZ2VzL3NtaWxleS1jeXJ1cy5qcGVnIiwiaWF0IjoxNjQxNTgwNTA0LCJleHAiOjE2NDY3NjQ1MDR9.CdK7f5TevlnyoGhdSXw8hBmWIQvFdNeeaEmyGkB4DDQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Host}}articles/{{Slug}}comments",
+									"host": [
+										"{{Host}}articles"
+									],
+									"path": [
+										"{{Slug}}comments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Put",
+					"item": [
+						{
+							"name": "ActualizarArticulo",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var PRUEBA = pm.environment.get('Prueba')\r",
+											"var data = JSON.parse(responseBody);\r",
+											"\r",
+											"if (PRUEBA === true){\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    postman.setEnvironmentVariable(\"Slug\", data.article.slug);\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"}else{\r",
+											"    pm.test(\"Status code is 404\"),function(){\r",
+											"        pm.response.to.have.status(404);\r",
+											"    }\r",
+											"}\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is less than 600ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"slug es correcto\", function(){\r",
+											"    pm.expect(data.slug).to.eql(pm.environment.get(\"slug\"));\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Content-Type header es application/json; charset=utf-8\", () => {\r",
+											"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Check the active environment\", () => {\r",
+											"  pm.expect(pm.environment.name).to.eql(\"ConduitTest\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var TOKEN = pm.environment.get('Token');\r",
+											"var PRUEBA = pm.environment.get('Prueba');\r",
+											"\r",
+											"if (PRUEBA === true){\r",
+											"pm.sendRequest({\r",
+											"    url: 'https://api.realworld.io/api/articles/',\r",
+											"    method: 'POST',\r",
+											"    header: { 'Content-Type': 'application/json',\r",
+											"    'Authorization': `Bearer ${TOKEN}`\r",
+											"     },\r",
+											"\r",
+											"    body: {\r",
+											"        mode: 'raw',\r",
+											"        raw: JSON.stringify({\r",
+											"    \"article\": {\r",
+											"        \"tagList\": [],\r",
+											"        \"title\": \"Articulo\",\r",
+											"        \"description\": \"articulod\",\r",
+											"        \"body\": \"articuloe\"\r",
+											"        }\r",
+											"    })}\r",
+											"}) \r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"article\": {\r\n        \"description\": \"esta es una nueva descripcion de el articulo actualizado\"\r\n    }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}articles/{{Slug}}",
+									"host": [
+										"{{Host}}articles"
+									],
+									"path": [
+										"{{Slug}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ActualizarUser",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaGFuYWFuZHJlYTEwMDBAZ21haWwuY29tIiwidXNlcm5hbWUiOiJBbmRyZWEgZWRpdGFkYSIsImJpbyI6bnVsbCwiaW1hZ2UiOiJodHRwczovL2FwaS5yZWFsd29ybGQuaW8vaW1hZ2VzL3NtaWxleS1jeXJ1cy5qcGVnIiwiaWF0IjoxNjQxNTgwNTA0LCJleHAiOjE2NDY3NjQ1MDR9.CdK7f5TevlnyoGhdSXw8hBmWIQvFdNeeaEmyGkB4DDQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user\": {\r\n    \"bio\": \"esto es una nueva actualización del usuario en bio\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}{{User}}",
+									"host": [
+										"{{Host}}{{User}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "slug",
+			"value": ""
+		}
+	]
+}

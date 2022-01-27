@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Articles","List articles","SUCCESS","2022-01-22T00:07:22.295-05:00[America/Bogota]","0.0","8.45"
+"Articles","Post article","SUCCESS","2022-01-22T00:07:30.774-05:00[America/Bogota]","0.0","1.94"
+"Articles","Delete article created","SUCCESS","2022-01-22T00:07:33.668-05:00[America/Bogota]","0.0","0.03"
