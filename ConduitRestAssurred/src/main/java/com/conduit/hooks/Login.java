@@ -12,9 +12,11 @@ import net.serenitybdd.screenplay.Tasks;
 import org.junit.Before;
 
 public class Login implements Task {
+    
     User user = new User();
     DataUser dataUser = new DataUser();
-@Before
+
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         user.setEmail("johanaandrea1000@gmail.com");

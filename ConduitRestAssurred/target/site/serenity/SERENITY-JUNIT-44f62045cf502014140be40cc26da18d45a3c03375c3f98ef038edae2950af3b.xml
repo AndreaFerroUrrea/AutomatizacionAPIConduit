@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Articles" skipped="1" tests="4" time="8.87" timestamp="2022-01-24 02:55:49"><testcase name="List articles"/><testcase name="Post article"><error type="net.serenitybdd.core.exceptions.UnrecognisedException"/><system-err>null&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Articles" skipped="1" tests="4" time="8.11" timestamp="2022-01-27 12:55:35"><testcase name="List articles"/><testcase name="Post article"><error type="net.serenitybdd.core.exceptions.UnrecognisedException"/><system-err>null&#13;
 io.cucumber.datatable.UndefinedDataTableTypeException.listNoConverterDefined(UndefinedDataTableTypeException.java:110)&#13;
 io.cucumber.datatable.DataTableTypeRegistryTableConverter.toList(DataTableTypeRegistryTableConverter.java:136)&#13;
 io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:102)&#13;

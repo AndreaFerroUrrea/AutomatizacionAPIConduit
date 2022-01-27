@@ -1,5 +1,6 @@
 package com.conduit.stepDefinitions;
 
+import com.conduit.models.User;
 import com.conduit.questions.StatusCode;
 import com.conduit.hooks.Login;
 import com.conduit.utils.Constants;
@@ -22,9 +23,12 @@ Actor andrea = Actor.named("Andrea is actor");
         andrea.whoCan(CallAnApi.at(restApiUrl));
     }
 
-    @When("she enters all the data correctly")
-    public void sheEntersAllTheDataCorrectly() {
-    andrea.attemptsTo(Login.withInfo());
+    @When("she enters the data {string} y  {string} correctly")
+    public void sheEntersTheDataYCorrectly(String email, String password) {
+        User userData = new User();
+        userData.getEmail(email);
+        userData.getPassword(password);
+        andrea.attemptsTo(Login.withInfo());
     }
 
     @Then("she must make a correct record")
