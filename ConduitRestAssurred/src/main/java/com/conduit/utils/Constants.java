@@ -1,7 +1,6 @@
 package com.conduit.utils;
 
 
-import static com.conduit.hooks.Login.TOKEN;
 
 public class Constants {
     public static final String MENSAJE = "El codigo de respuesta";

@@ -12,16 +12,18 @@ import net.serenitybdd.screenplay.Tasks;
 import org.junit.Before;
 
 public class Login implements Task {
-    
-    User user = new User();
+
+    User user;
+
+    public Login(User user) {
+        this.user = user;
+    }
+
     DataUser dataUser = new DataUser();
 
-
+String response;
     @Override
     public <T extends Actor> void performAs(T actor) {
-        user.setEmail("johanaandrea1000@gmail.com");
-        user.setPassword("14Empanadas.");
-
         dataUser.setUser(user);
         actor.attemptsTo(
                 Post.to("/users/login").with(requestSpecification -> requestSpecification
@@ -29,9 +31,9 @@ public class Login implements Task {
                         .body(dataUser)));
 
     }
-    public static  String TOKEN = SerenityRest.lastResponse().jsonPath().getString("token");
+    //public static  String TOKEN = SerenityRest.lastResponse().jsonPath().getString("token");
 
-    public static Performable withInfo(){
-        return Tasks.instrumented(Login.class);
+    public static Performable withInfo(User dataUsuario){
+        return Tasks.instrumented(Login.class, dataUsuario);
     }
 }
