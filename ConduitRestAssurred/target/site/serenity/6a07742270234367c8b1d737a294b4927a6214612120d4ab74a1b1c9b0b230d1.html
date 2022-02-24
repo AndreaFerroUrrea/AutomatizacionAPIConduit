@@ -148,7 +148,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-01-2022 12:55</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-02-2022 09:17</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -185,9 +185,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">
+                                <span class="success-color">
                                     Post article
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -246,9 +246,83 @@
 
     <div class="clr"></div>
 
+        <div class="story-title">
+            <h3 class="story-header">Scenario Outline</h3>
+
+            <div class="scenario">Given Andrea needs to submit an article<br>When she sends the correct fields<br><table class='embedded'><thead><th>tagList</th><th>&lt;tagList&gt;</th></thead><tbody><tr><td>title</td><td>&lt;title&gt;</td></tr><tr><td>description</td><td>&lt;description&gt;</td></tr><tr><td>body</td><td>&lt;body&gt;</td></tr></tbody></table><br>Then she must create the article correctly</div>
+
+        </div>
 
     <div id="beforetable"></div>
 
+
+            <h3 class="story-header">Examples:&nbsp;</h3>
+                <div class="requirementNarrative"></div>
+
+
+                <p class="example-tag">
+                </p>
+
+            <div class="example-table test-report">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                            <th>Tag List</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Body</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="test-SUCCESS"><a href="#0">1</a></td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">fruta</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">manzana</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">roja</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">manzana roja</a>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td class="test-SUCCESS"><a href="#1">2</a></td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">fruta</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">pera</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">verde</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">verde pera</a>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td class="test-SUCCESS"><a href="#2">3</a></td>
+                                <td class="test-SUCCESS"><a
+                                            href="#2">verdura</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#2">zanahoria</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#2">naranja</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#2">naranja zanahoria</a>
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
     <div id="tablecontents">
         <div>
@@ -271,14 +345,45 @@
 
                         <td width="50" class="step-icon">
                             <a name="0"></a>
-                                <span style="margin-left: 20px;"
-                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Example: {tagList=fruta, title=manzana, description=roja, body=manzana roja}
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">2.19s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
-                                    <span class="top-level-step">
+                                    <span class="nested-group-step">
                                                 Given Andrea needs to submit an article
                                         </span>
                                 <span class="evidence">
@@ -286,95 +391,773 @@
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.03s</span></td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.01s</span></td>
                     </tr>
-                    <tr class="test-ERROR">
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-1"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0-1 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                When she sends the correct fields<br><table class='embedded'><thead><th>tagList</th><th>fruta</th></thead><tbody><tr><td>title</td><td>manzana</td></tr><tr><td>description</td><td>roja</td></tr><tr><td>body</td><td>manzana roja</td></tr></tbody></table>
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.92s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0-1" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="0-1-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0-1-0 success-icon"
+                                       style="margin-left: 60px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Andrea is the actor create article
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.82s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0-1-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="110" class="step-icon">
+                            <a name="0-1-0-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0-1-0-0 success-icon"
+                                       style="margin-left: 80px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                andrea is the actor executes a POST on the resource /articles/
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.75s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0-1-0-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="130" class="step-icon">
+                            <a name="0-1-0-0-0"></a>
+                                <span style="margin-left: 100px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                POST https://api.realworld.io/api/articles/
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-6">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: application/json</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                        <h4>Content Body</h4>
+                                        <pre>{<br>    &quot;article&quot;: {<br>        &quot;title&quot;: &quot;manzana&quot;,<br>        &quot;description&quot;: &quot;roja&quot;,<br>        &quot;body&quot;: &quot;manzana roja&quot;<br>    }<br>}</pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 24 Feb 2022 14:17:17 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;17b-Ly0a+wqcblJ3H7PYus1ClmDCNFA&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=Q7CmMX50kJKuJrrk%2BcSGBjTRbtYZ8OAmBll%2Bjh8L3okeSKLLWfnhpWHybOwwwZ7BNCQWg2TbFNJjkXN0DeCiPWUYd2NhmK6DMmU0lGD11RJe%2FPynhGCXJ4o7DDAOF55p4y%2BP&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 6e29510b4c1209aa-MIA<br>Content-Encoding: gzip<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>{<br>    &quot;article&quot;: {<br>        &quot;slug&quot;: &quot;manzana-7429&quot;,<br>        &quot;title&quot;: &quot;manzana&quot;,<br>        &quot;description&quot;: &quot;roja&quot;,<br>        &quot;body&quot;: &quot;manzana roja&quot;,<br>        &quot;createdAt&quot;: &quot;2022-02-24T14:17:17.384Z&quot;,<br>        &quot;updatedAt&quot;: &quot;2022-02-24T14:17:17.384Z&quot;,<br>        &quot;tagList&quot;: [<br>            <br>        ],<br>        &quot;author&quot;: {<br>            &quot;username&quot;: &quot;Andrea&quot;,<br>            &quot;bio&quot;: &quot;actualizar1&quot;,<br>            &quot;image&quot;: &quot;https://api.realworld.io/images/smiley-cyrus.jpeg&quot;<br>        },<br>        &quot;favoritedBy&quot;: [<br>            <br>        ],<br>        &quot;_count&quot;: {<br>            &quot;favoritedBy&quot;: 0<br>        },<br>        &quot;favoritesCount&quot;: 0,<br>        &quot;favorited&quot;: false<br>    }<br>}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="0-2"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0-2 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Then she must create the article correctly
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">1.24s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection0-2" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="0-2-0"></a>
+                                <span style="margin-left: 60px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then COMPARAR should be null
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">1.23s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
 
                         <td width="50" class="step-icon">
                             <a name="1"></a>
-                                <span style="margin-left: 20px;"
-                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Example: {tagList=fruta, title=pera, description=verde, body=verde pera}
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.53s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
-                                    <span class="top-level-step">
-                                                When she sends the correct fields<br><table class='embedded'><thead><th>tagList</th><th>title</th><th>description</th><th>body</th></thead><tbody><tr><td>fruta</td><td>manzana</td><td>roja</td><td>manzana roja</td></tr><tr><td>fruta</td><td>pera</td><td>verde</td><td>verde pera</td></tr><tr><td>verdura</td><td>zanahoria</td><td>naranja</td><td>naranja zanahoria</td></tr></tbody></table>
+                                    <span class="nested-group-step">
+                                                Given Andrea needs to submit an article
                                         </span>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">ERROR</span></td>
-                        <td width="100"><span class="top-level-step">0.04s</span></td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.01s</span></td>
                     </tr>
-                        <tr class="test-ERROR">
-                            <td width="40">&nbsp</td>
-                            <td width="%" colspan="3" class="error-message-cell">
+                    <tr class="test-SUCCESS">
 
+                        <td width="70" class="step-icon">
+                            <a name="1-1"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1-1 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
 
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">net.serenitybdd.core.exceptions.UnrecognisedException</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-2""
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                When she sends the correct fields<br><table class='embedded'><thead><th>tagList</th><th>fruta</th></thead><tbody><tr><td>title</td><td>pera</td></tr><tr><td>description</td><td>verde</td></tr><tr><td>body</td><td>verde pera</td></tr></tbody></table>
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
 
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-2">
-            <div class="card">
-                <div class="card-header">
-                    <h4>net.serenitybdd.core.exceptions.UnrecognisedException </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>io.cucumber.datatable.UndefinedDataTableTypeException.listNoConverterDefined(UndefinedDataTableTypeException.java:110)<br />io.cucumber.datatable.DataTableTypeRegistryTableConverter.toList(DataTableTypeRegistryTableConverter.java:136)<br />io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:102)<br />io.cucumber.datatable.DataTable.convert(DataTable.java:360)<br />io.cucumber.core.stepexpression.StepExpressionFactory.lambda$createExpression$0(StepExpressionFactory.java:66)<br />io.cucumber.core.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:47)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:63)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:49)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:99)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:71)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:234)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)<br /></pre>
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.45s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1-1" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="1-1-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1-1-0 success-icon"
+                                       style="margin-left: 60px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Andrea is the actor create article
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.43s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1-1-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="110" class="step-icon">
+                            <a name="1-1-0-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1-1-0-0 success-icon"
+                                       style="margin-left: 80px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                andrea is the actor executes a POST on the resource /articles/
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.42s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1-1-0-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="130" class="step-icon">
+                            <a name="1-1-0-0-0"></a>
+                                <span style="margin-left: 100px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                POST https://api.realworld.io/api/articles/
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-14">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-14">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: application/json</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                        <h4>Content Body</h4>
+                                        <pre>{<br>    &quot;article&quot;: {<br>        &quot;title&quot;: &quot;pera&quot;,<br>        &quot;description&quot;: &quot;verde&quot;,<br>        &quot;body&quot;: &quot;verde pera&quot;<br>    }<br>}</pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 24 Feb 2022 14:17:19 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;174-4bIv8kexdPKQGVJrZKEdeHk/Leo&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=QsXNkJz8w4lAGV3DHfjqq5kgYkCq6L2gTP8vsqLOL3oQBrrrvtWmJS%2F4JMMhvhDjslFrmTz%2FnFYbe6qBi4FlZSkV2LnYiegiAfdeNi3Yz%2FpTgpJmBMkvtU7go2xnB81fsSbJ&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 6e2951160d786dd9-MIA<br>Content-Encoding: gzip<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>{<br>    &quot;article&quot;: {<br>        &quot;slug&quot;: &quot;pera-7429&quot;,<br>        &quot;title&quot;: &quot;pera&quot;,<br>        &quot;description&quot;: &quot;verde&quot;,<br>        &quot;body&quot;: &quot;verde pera&quot;,<br>        &quot;createdAt&quot;: &quot;2022-02-24T14:17:19.111Z&quot;,<br>        &quot;updatedAt&quot;: &quot;2022-02-24T14:17:19.111Z&quot;,<br>        &quot;tagList&quot;: [<br>            <br>        ],<br>        &quot;author&quot;: {<br>            &quot;username&quot;: &quot;Andrea&quot;,<br>            &quot;bio&quot;: &quot;actualizar1&quot;,<br>            &quot;image&quot;: &quot;https://api.realworld.io/images/smiley-cyrus.jpeg&quot;<br>        },<br>        &quot;favoritedBy&quot;: [<br>            <br>        ],<br>        &quot;_count&quot;: {<br>            &quot;favoritedBy&quot;: 0<br>        },<br>        &quot;favoritesCount&quot;: 0,<br>        &quot;favorited&quot;: false<br>    }<br>}</pre>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
 
-                </div>
-            </div>
-        </div>
-    </div>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
                             </td>
                         </tr>
-                    <tr class="test-SKIPPED">
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="1-2"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1-2 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Then she must create the article correctly
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.05s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection1-2" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="1-2-0"></a>
+                                <span style="margin-left: 60px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then COMPARAR should be null
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.03s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
 
                         <td width="50" class="step-icon">
                             <a name="2"></a>
-                                <span style="margin-left: 20px;"
-                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2 success-icon"
+                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                                   style="display:block;">
+                                    <span class="top-level-step">
+                                                Example: {tagList=verdura, title=zanahoria, description=naranja, body=naranja zanahoria}
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">0.64s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection2" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="2-0"></a>
+                                <span style="margin-left: 40px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
-                                    <span class="top-level-step">
-                                                Then she must create the article correctly
+                                    <span class="nested-group-step">
+                                                Given Andrea needs to submit an article
                                         </span>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">SKIPPED</span></td>
-                        <td width="100"><span class="top-level-step">0.01s</span></td>
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.02s</span></td>
                     </tr>
-                <tr class="test-ERROR">
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="2-1"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2-1 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                When she sends the correct fields<br><table class='embedded'><thead><th>tagList</th><th>verdura</th></thead><tbody><tr><td>title</td><td>zanahoria</td></tr><tr><td>description</td><td>naranja</td></tr><tr><td>body</td><td>naranja zanahoria</td></tr></tbody></table>
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.52s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection2-1" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="2-1-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2-1-0 success-icon"
+                                       style="margin-left: 60px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Andrea is the actor create article
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.51s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection2-1-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="110" class="step-icon">
+                            <a name="2-1-0-0"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1-0-0')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2-1-0-0 success-icon"
+                                       style="margin-left: 80px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1-0-0')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                andrea is the actor executes a POST on the resource /articles/
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.47s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection2-1-0-0" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="130" class="step-icon">
+                            <a name="2-1-0-0-0"></a>
+                                <span style="margin-left: 100px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                POST https://api.realworld.io/api/articles/
+                                        </span>
+                                <span class="evidence">
+                                        <span class="piece-of-evidence">
+                    <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-22">
+                            REST Query
+                        </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="rest-query-details">
+                        <div class="collapse multi-collapse" id="restModal-REST-22">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Response</h4>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: application/json</p>
+                                        <h4>Request Headers</h4>
+                                        <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                        <h4>Content Body</h4>
+                                        <pre>{<br>    &quot;article&quot;: {<br>        &quot;title&quot;: &quot;zanahoria&quot;,<br>        &quot;description&quot;: &quot;naranja&quot;,<br>        &quot;body&quot;: &quot;naranja zanahoria&quot;<br>    }<br>}</pre>
+                                        <h4>Request Cookies</h4>
+                                        <pre></pre>
+                                        <h4>Response Headers</h4>
+                                        <pre>Date: Thu, 24 Feb 2022 14:17:19 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;187-z6uw7G6E5ev6U2Sa3Nm0fo5fK+8&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=YjKuaKEXsefXmPk37zT%2B%2FGA6DVOf4bDNqMyjUKF5c219xucOykmQSWiUZ%2BrENroBUCKycBAw1VrNybQSRysWDPf7XH6Oy2ifmXmRG%2BrBD3PZRTBS2ol%2FptqA0aqgQMEgQfdB&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 6e29511a2c136dd9-MIA<br>Content-Encoding: gzip<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
+                                    <h4>Response Body</h4>
+                                        <pre>{<br>    &quot;article&quot;: {<br>        &quot;slug&quot;: &quot;zanahoria-7429&quot;,<br>        &quot;title&quot;: &quot;zanahoria&quot;,<br>        &quot;description&quot;: &quot;naranja&quot;,<br>        &quot;body&quot;: &quot;naranja zanahoria&quot;,<br>        &quot;createdAt&quot;: &quot;2022-02-24T14:17:19.762Z&quot;,<br>        &quot;updatedAt&quot;: &quot;2022-02-24T14:17:19.762Z&quot;,<br>        &quot;tagList&quot;: [<br>            <br>        ],<br>        &quot;author&quot;: {<br>            &quot;username&quot;: &quot;Andrea&quot;,<br>            &quot;bio&quot;: &quot;actualizar1&quot;,<br>            &quot;image&quot;: &quot;https://api.realworld.io/images/smiley-cyrus.jpeg&quot;<br>        },<br>        &quot;favoritedBy&quot;: [<br>            <br>        ],<br>        &quot;_count&quot;: {<br>            &quot;favoritedBy&quot;: 0<br>        },<br>        &quot;favoritesCount&quot;: 0,<br>        &quot;favorited&quot;: false<br>    }<br>}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        </span>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="70" class="step-icon">
+                            <a name="2-2"></a>
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
+                                   style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2-2 success-icon"
+                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
+                                </a>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
+                                   style="display:block;">
+                                    <span class="nested-step">
+                                                Then she must create the article correctly
+                                        </span>
+                                </a>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-step">0.08s</span></td>
+                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <table id="stepSection2-2" class="step-table-nested" style="display:none;">
+
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="2-2-0"></a>
+                                <span style="margin-left: 60px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then COMPARAR should be null
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.06s</span></td>
+                    </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                <tr class="test-SUCCESS">
                         <td colspan="2"></td>
-                    <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>0.12s</em></span></td>
+                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>3.46s</em></span></td>
                 </tr>
 
             </table>

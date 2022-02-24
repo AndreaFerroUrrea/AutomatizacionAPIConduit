@@ -2,13 +2,13 @@ package com.conduit.models;
 
 public class Article {
 
-    private Data article;
+    private DataArticles article;
 
-    public Data getArticle() {
+    public DataArticles getArticle() {
         return article;
     }
 
-    public void setArticle(Data article) {
+    public void setArticle(DataArticles article) {
         this.article = article;
     }
 

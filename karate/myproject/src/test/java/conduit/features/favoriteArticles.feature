@@ -107,4 +107,3 @@ Scenario:Favorite articles
     When method delete
     Then status 200
     And match response.article.favoritesCount == 0
-

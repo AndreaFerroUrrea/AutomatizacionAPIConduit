@@ -1,10 +1,8 @@
 package com.conduit.models;
-
-import java.lang.annotation.Annotation;
 import java.util.List;
 
 
-public class DataArticle implements io.cucumber.java.it.Data {
+public class DataArticles {
 
     private List<String> tagList = null;
     private String title;
@@ -42,15 +40,5 @@ public class DataArticle implements io.cucumber.java.it.Data {
 
     public void setBody(String body) {
         this.body = body;
-    }
-
-    @Override
-    public String value() {
-        return null;
-    }
-
-    @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
     }
 }

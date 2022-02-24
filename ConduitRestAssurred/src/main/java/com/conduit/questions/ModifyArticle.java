@@ -11,7 +11,7 @@ public class ModifyArticle implements Question {
 
     @Override
     public Object answeredBy(Actor actor) {
-        String response = SerenityRest.lastResponse().jsonPath().getString("description");
+        String response = SerenityRest.lastResponse().jsonPath().getString("article.description");
     return response;
     }
     public static ModifyArticle enter(){

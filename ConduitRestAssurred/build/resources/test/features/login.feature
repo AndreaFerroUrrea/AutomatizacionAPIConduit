@@ -1,6 +1,5 @@
 Feature: Login to users
   i neet login to user
-
   @Post
   Scenario Outline: Login usuario
     Given Andrea is a client that can login
@@ -9,4 +8,3 @@ Feature: Login to users
     Examples:
       | email                      | password     |
       | johanaandrea1000@gmail.com | 14Empanadas. |
-

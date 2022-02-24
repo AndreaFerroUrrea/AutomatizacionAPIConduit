@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Articles" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-02-24T14:17:07" hostname="TELO2Y0SL" time="14.455">
+  <properties/>
+  <testcase name="List articles" classname="Articles" time="9.034"/>
+  <testcase name="Post article #1" classname="Articles" time="2.235"/>
+  <testcase name="Post article #2" classname="Articles" time="0.582"/>
+  <testcase name="Post article #3" classname="Articles" time="0.676"/>
+  <testcase name="Put article" classname="Articles" time="0.977"/>
+  <testcase name="Delete article created" classname="Articles" time="0.951"/>
+  <system-out><![CDATA[HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2022 14:17:15 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 33
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"21-/3zoiGPNflLbkDGmxSQjxjQsAo8"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=N6GZfU4YryT1trEN51078LEiubLBzoM2bT7v0gyJSQBrF2rLmRBYHuexLYRy%2Bk1%2BJkfX7CCrRx2zO7lWdQhN556Y4xBZA3lHa6QNo6%2FisSCfy3skedq8fC2ooFVzrkmllzT4"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 6e29510089548dc6-MIA
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "articles": [
+        
+    ],
+    "articlesCount": 0
+}
+Step argument class io.cucumber.core.gherkin.messages.GherkinMessagesDataTableArgument
+HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2022 14:17:17 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"17b-Ly0a+wqcblJ3H7PYus1ClmDCNFA"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Q7CmMX50kJKuJrrk%2BcSGBjTRbtYZ8OAmBll%2Bjh8L3okeSKLLWfnhpWHybOwwwZ7BNCQWg2TbFNJjkXN0DeCiPWUYd2NhmK6DMmU0lGD11RJe%2FPynhGCXJ4o7DDAOF55p4y%2BP"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 6e29510b4c1209aa-MIA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "article": {
+        "slug": "manzana-7429",
+        "title": "manzana",
+        "description": "roja",
+        "body": "manzana roja",
+        "createdAt": "2022-02-24T14:17:17.384Z",
+        "updatedAt": "2022-02-24T14:17:17.384Z",
+        "tagList": [
+            
+        ],
+        "author": {
+            "username": "Andrea",
+            "bio": "actualizar1",
+            "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
+        },
+        "favoritedBy": [
+            
+        ],
+        "_count": {
+            "favoritedBy": 0
+        },
+        "favoritesCount": 0,
+        "favorited": false
+    }
+}
+Step argument class io.cucumber.core.gherkin.messages.GherkinMessagesDataTableArgument
+HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2022 14:17:19 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"174-4bIv8kexdPKQGVJrZKEdeHk/Leo"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QsXNkJz8w4lAGV3DHfjqq5kgYkCq6L2gTP8vsqLOL3oQBrrrvtWmJS%2F4JMMhvhDjslFrmTz%2FnFYbe6qBi4FlZSkV2LnYiegiAfdeNi3Yz%2FpTgpJmBMkvtU7go2xnB81fsSbJ"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 6e2951160d786dd9-MIA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "article": {
+        "slug": "pera-7429",
+        "title": "pera",
+        "description": "verde",
+        "body": "verde pera",
+        "createdAt": "2022-02-24T14:17:19.111Z",
+        "updatedAt": "2022-02-24T14:17:19.111Z",
+        "tagList": [
+            
+        ],
+        "author": {
+            "username": "Andrea",
+            "bio": "actualizar1",
+            "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
+        },
+        "favoritedBy": [
+            
+        ],
+        "_count": {
+            "favoritedBy": 0
+        },
+        "favoritesCount": 0,
+        "favorited": false
+    }
+}
+Step argument class io.cucumber.core.gherkin.messages.GherkinMessagesDataTableArgument
+HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2022 14:17:19 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"187-z6uw7G6E5ev6U2Sa3Nm0fo5fK+8"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YjKuaKEXsefXmPk37zT%2B%2FGA6DVOf4bDNqMyjUKF5c219xucOykmQSWiUZ%2BrENroBUCKycBAw1VrNybQSRysWDPf7XH6Oy2ifmXmRG%2BrBD3PZRTBS2ol%2FptqA0aqgQMEgQfdB"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 6e29511a2c136dd9-MIA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "article": {
+        "slug": "zanahoria-7429",
+        "title": "zanahoria",
+        "description": "naranja",
+        "body": "naranja zanahoria",
+        "createdAt": "2022-02-24T14:17:19.762Z",
+        "updatedAt": "2022-02-24T14:17:19.762Z",
+        "tagList": [
+            
+        ],
+        "author": {
+            "username": "Andrea",
+            "bio": "actualizar1",
+            "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
+        },
+        "favoritedBy": [
+            
+        ],
+        "_count": {
+            "favoritedBy": 0
+        },
+        "favoritesCount": 0,
+        "favorited": false
+    }
+}
+HTTP/1.1 200 OK
+Date: Thu, 24 Feb 2022 14:17:20 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"15b-njOL/7BK6+qipN5TrtQ5ObGjtJI"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sbb3p1EfU519nOLgiiZMyJoer1EJxYGQfz%2FQmGz9Q8zQQZqKh5%2FBN7lMlFC7MR9NdtJwIRYdNhVUDFFLyahmV3v6IWwiUNMtNxbc0ant%2BdRM50GR8r%2BxjtsKGHLzFJf61GzY"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 6e295120fd080351-MIA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "article": {
+        "title": "zanahoria",
+        "slug": "zanahoria-7429",
+        "body": "naranja zanahoria",
+        "description": "PURPURA",
+        "createdAt": "2022-02-24T14:17:19.762Z",
+        "updatedAt": "2022-02-24T14:17:20.857Z",
+        "tagList": [
+            
+        ],
+        "favoritesCount": 0,
+        "favorited": false,
+        "author": {
+            "username": "Andrea",
+            "bio": "actualizar1",
+            "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
+        }
+    }
+}
+HTTP/1.1 204 No Content
+Date: Thu, 24 Feb 2022 14:17:21 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2Fbvvyx4kdgMg8hNbscsFTpH8S03PIiBUeJJHAM1qhDFn2RNAMa%2BxjMnuYfNp3YFyaPFfxX5z7ihe1T64e4YYFXRfVldahtSGBuPRPJRoXrU%2Bouj%2F2jfM0WYH9gv%2F%2F3%2BwV4zn"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 6e2951273a046dbb-MIA
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+List articles(articles;list-articles)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+List articles
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Post article(articles;post-article)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Post article
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Post article
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Put article(articles;put-article)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Put article
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Proyectos%20Semillero/Automatización%20de%20servicios/Conduit/ConduitRestAssurred/src/test/resources/features/articles.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Delete article created(articles;delete-article-created)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Delete article created
+----------------------------------------------------------------------------
+]]></system-err>
+</testsuite>

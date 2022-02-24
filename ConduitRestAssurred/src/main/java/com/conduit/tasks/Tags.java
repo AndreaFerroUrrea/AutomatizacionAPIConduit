@@ -19,8 +19,7 @@ public class Tags implements Task {
                 Get.resource("/tags")
                         .with(requestSpecification -> requestSpecification
                                 .contentType(ContentType.JSON)
-                                .auth()
-                                .oauth2(TOKEN_USER)
+                                .auth().oauth2(TOKEN_USER)
                         ));
     }
     public static Performable withInfo(){return Tasks.instrumented(Tags.class);}

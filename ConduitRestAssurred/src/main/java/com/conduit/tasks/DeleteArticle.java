@@ -16,7 +16,11 @@ public class DeleteArticle implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Delete.from("/articles/"+SLUG).with(requestSpecification -> requestSpecification.contentType(ContentType.JSON).auth().oauth2(TOKEN_USER))
+                Delete.from("/articles/"+SLUG)
+                        .with(requestSpecification -> requestSpecification
+                                .contentType(ContentType.JSON)
+                                .auth()
+                                .oauth2(TOKEN_USER))
         );
     }
     public static Performable withInfo(){return Tasks.instrumented(DeleteArticle.class);}

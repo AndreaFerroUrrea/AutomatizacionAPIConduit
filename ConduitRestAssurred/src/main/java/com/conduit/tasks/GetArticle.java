@@ -13,9 +13,10 @@ public class GetArticle implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Get.resource("/articles?limit=10&offset=0")
+                Get.resource("/articles?favorited=Andrea&limit=10&offset=0")
                         .with(requestSpecification -> requestSpecification
-                                .contentType(ContentType.JSON).auth()
+                                .contentType(ContentType.JSON)
+                                .auth()
                                 .oauth2(TOKEN_USER))
         );
     }

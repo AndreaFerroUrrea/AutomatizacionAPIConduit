@@ -1,5 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Articles","List articles","SUCCESS","2022-01-22T00:07:22.295-05:00[America/Bogota]","0.0","8.45"
+"Articles","List articles","SUCCESS","2022-01-27T12:55:35.404-05:00[America/Bogota]","0.0","6.88"
 "Login to users","List articles","IGNORED","2022-01-20T11:10:06.686-05:00[America/Bogota]","0.0","0.08"
 "get tags","Andrea get articles tags","SUCCESS","2022-01-21T11:08:51.347-05:00[America/Bogota]","0.0","7.8"
 "get tags","Andrea get tags","SUCCESS","2022-01-21T13:40:55.878-05:00[America/Bogota]","0.0","0.52"

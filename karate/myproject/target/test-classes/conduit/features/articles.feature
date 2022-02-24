@@ -11,12 +11,14 @@ Background:precondicions
 
 Scenario: Comment articles
     # Step 2: Get the slug ID for the first arice, save it to variable
+
     # Step 3: Make a GET call to 'comments' end-point to get all comments
     Given path 'articles/'+ dataSlug+'/comments'
     And header Authorization = 'Token ' + token
     When method Get
     Then status 200
     * print response
+    
     # Step 4: Verify response schema
     And match response ==
     """
@@ -87,7 +89,6 @@ And header Authorization = 'Token ' + token
  When method Delete
  Then status 204
  * print response
-
 
  # Step 11: Get all comments again and verify number of comments decreased by 1
 

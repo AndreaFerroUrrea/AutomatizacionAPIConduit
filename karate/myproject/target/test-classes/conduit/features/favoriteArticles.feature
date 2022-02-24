@@ -7,8 +7,7 @@ Background:precondicions
     * def slug = callonce read('classpath:conduit/helpers/defSlug.feature')
     * def dataSlug = slug.responseSlug
     * url apiUrl
-    
-     
+
 Scenario:Favorite articles
     
      # Step 3: Make POST request to increse favorites count for the first 
@@ -66,8 +65,6 @@ Scenario:Favorite articles
     * def initialCount = 0
     * match response.articles[0].favoritesCount == initialCount + 1
 
-
-
     # Step 6: Get all favorite articles
     Given path 'articles'
     Given params {favorited:Andrea, limit:10, offset:0}
@@ -110,4 +107,3 @@ Scenario:Favorite articles
     When method delete
     Then status 200
     And match response.article.favoritesCount == 0
-
