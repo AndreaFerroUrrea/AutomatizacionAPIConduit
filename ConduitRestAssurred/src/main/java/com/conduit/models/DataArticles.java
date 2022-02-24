@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.util.List;
 
 
-public class Data implements io.cucumber.java.it.Data {
+public class DataArticle implements io.cucumber.java.it.Data {
 
     private List<String> tagList = null;
     private String title;
